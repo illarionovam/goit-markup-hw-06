@@ -118,6 +118,14 @@ img {
     padding: 96px 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .container.customers,
+    .footer .container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .section {
         padding: 120px 0;
@@ -424,6 +432,13 @@ img {
 .logo-container {
     margin-bottom: 16px;
     display: block;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-container {
+        text-align: left;
+    }
 }
 
 .footer {
@@ -450,11 +465,18 @@ img {
 
 .footer-text-container {
     max-width: 264px;
-    margin-right: 120px;
 }
 
-.footer-social-links-container {
-    margin-right: 80px;
+@media screen and (min-width: 1158px) {
+    .footer-text-container {
+        margin-right: 120px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-social-links-container {
+        margin-right: 80px;
+    }
 }
 
 .footer-subscribe-container {
@@ -465,12 +487,26 @@ img {
 .subscribe-form {
     display: flex;
     align-items: center;
-    gap: var(--gap-size);
+    flex-direction: column;
+    gap: 16px 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-form {
+        flex-direction: row;
+    }
 }
 
 .subscribe-form-field {
     width: 100%;
-    max-width: 264px;
+    max-width: 398px;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-form-field {
+        width: 100%;
+        max-width: 264px;
+    }
 }
 
 .subscribe-form-email {
@@ -508,13 +544,38 @@ img {
 
 .footer .container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;   
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .container {
+        align-items: baseline;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer .container {
+        gap: 0;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
 }
 
 .footer-caption {
     font-weight: 500;
     color: var(--white-color);
     margin-bottom: 16px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-caption {
+        text-align: left;
+    }
 }
 
 .social-links {
