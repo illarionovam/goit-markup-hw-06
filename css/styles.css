@@ -153,6 +153,13 @@ img {
     background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2) or (min-resolution: 192dpi) or (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(var(--grey-color), var(--grey-color)),
+            url(../images/office_background@2x.jpg);
+    }
+}
+
 .section {
     padding: 96px 0;
 }
@@ -489,6 +496,15 @@ img {
     margin-right: auto;
     margin-bottom: 48px;
     letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+    .first-title {
+        max-width: 320px;
+        line-height: 1.111;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+    }
 }
 
 .hero-button {
@@ -1059,7 +1075,7 @@ input[type='checkbox']:checked + .contact-form-checkbox {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1068,6 +1084,7 @@ input[type='checkbox']:checked + .contact-form-checkbox {
     transform: translateX(100%);
     transition: transform var(--transition);    
     padding: 80px 35px 40px 40px;
+    z-index: 999;
 }
 
 .mobile-menu-container.is-open {
@@ -1079,4 +1096,20 @@ input[type='checkbox']:checked + .contact-form-checkbox {
     flex-direction: column;
     gap: 40px;
     margin-bottom: auto;
+}
+
+/* мобільне меню виглядає дуже не красиво для 320 px екрану, якщо лише за макетом робити
+порадилась із ментором, і вирішили зробити ще 2 медіа-правилі для менших екранчиків */
+@media screen and (max-width: 427px) {
+    .mobile-menu-phone {
+        font-size: 24px;
+        line-height: 1.111;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .mobile-social-links {
+        gap: 24px;
+    }
 }
