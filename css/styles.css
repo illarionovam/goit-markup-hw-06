@@ -153,7 +153,7 @@ img {
     background-size: cover;
 }
 
-@media (min-device-pixel-ratio: 2) or (min-resolution: 192dpi) or (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section {
         background-image: linear-gradient(var(--grey-color), var(--grey-color)),
             url(../images/office_background@2x.jpg);
@@ -320,6 +320,7 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
     .portfolio-gallery {
         gap: 72px 24px;
+        justify-content: left;
     }
 }
 
