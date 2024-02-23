@@ -107,6 +107,11 @@ img {
     }
 }
 
+.menu-container {
+    display: flex;
+    gap: 40px;
+}
+
 @media screen and (max-width: 767px) {
     .menu-container {
         display: none;
@@ -1050,7 +1055,7 @@ input[type='checkbox']:checked + .contact-form-checkbox {
     min-width: 169px;
 }
 
-.menu-container {
+.mobile-menu-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -1065,7 +1070,7 @@ input[type='checkbox']:checked + .contact-form-checkbox {
     padding: 80px 35px 40px 40px;
 }
 
-.menu-container.is-open {
+.mobile-menu-container.is-open {
     transform: translateX(0);
 }
 
