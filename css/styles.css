@@ -144,8 +144,8 @@ img {
 
 .hero-section {
     max-width: 1440px;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(var(--grey-color), var(--grey-color)), url(../images/office_background.jpg);
@@ -153,10 +153,23 @@ img {
     background-size: cover;
 }
 
+@media only screen and (min-width: 1158px) {
+    .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+}
+
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section {
         background-image: linear-gradient(var(--grey-color), var(--grey-color)),
             url(../images/office_background@2x.jpg);
+    }
+}
+
+@media only screen and (max-width: 1158px) {
+    .offer-caption + p {
+        font-weight: 500;
     }
 }
 
